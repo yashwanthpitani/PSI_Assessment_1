@@ -1,0 +1,162 @@
+QUESTION-1
+import java.util.Scanner;
+public class  pgm1{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in); 
+        System.out.println("enter  a:");
+        int a= sc.nextInt();  
+        System.out.println("enter b: ");
+        int b= sc.nextInt();  
+        System.out.println("enter c : ");
+        int c= sc.nextInt();  
+        System.out.println("enter d : ");
+        int d= sc.nextInt();  
+        if((a==b)&&(b==c)&&(c==d)&&(d==a)){
+            System.out.print("Numbers are Equal");
+        }
+        else{
+            System.out.print("Numbers are not equal");
+        }
+    }
+}
+
+
+QUESTION- 2
+import java.util.Scanner;
+public class pgm2 {
+   public static void main(String[] args) 
+   {
+    double a,b;
+    Scanner sc=new Scanner(System.in);
+    System.out.print("1st num: ");
+    a=sc.nextDouble();
+    System.out.print("2nd num: ");
+    b=sc.nextDouble();
+    if(a>0&&a<1&&b>0&&b<1)
+    {
+        System.out.println("true");
+    }
+    else
+    {
+        System.out.println("false");
+    }
+   }
+}
+
+
+QUESTION- 3
+import java.util.Scanner;
+public class pgm3 {
+    public static void main(String []args){
+        boolean [][] a = {{true,false,true},{false,true,false}};
+        for(int i = 0;i < a.length; i++){
+            for(int j = 0; j < a[0].length; j++){
+                if(a[i][j])
+                System.out.print("t");
+                else
+                System.out.print("f");
+            }
+            System.out.println();
+        }
+    } 
+}
+
+
+QUESTION– 4
+import java.util.Scanner;  
+public class pgm4 
+{  
+    public static void main(String args[])    
+    {  
+    int i, j;  
+    System.out.println("Enter total rows and columns: ");  
+    Scanner s = new Scanner(System.in);  
+    int row = s.nextInt();  
+    int column = s.nextInt();  
+    int array[][] = new int[row][column];  
+    System.out.println("Enter matrix:");  
+    for(i = 0; i < row; i++)  
+    {  
+        for(j = 0; j < column; j++)   
+            {  
+            array[i][j] = s.nextInt();  
+            System.out.print(" ");  
+            }  
+    }  
+    System.out.println("The above matrix before Transpose is ");  
+    for(i = 0; i < row; i++)  
+        {  
+            for(j = 0; j < column; j++)  
+            {  
+            System.out.print(array[i][j]+" ");  
+            }  
+            System.out.println(" ");  
+        }  
+    System.out.println("The above matrix after Transpose is ");  
+    for(i = 0; i < column; i++)  
+        {  
+            for(j = 0; j < row; j++)  
+            {  
+                System.out.print(array[j][i]+" ");  
+            }  
+            System.out.println(" ");  
+        }  
+    }  
+}  
+
+
+QUESTION-5
+import java.util.Arrays;
+import java.util.*;
+public class pgm5 {
+   public static void main(String[] args)
+   {
+       int n;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter the n value ");
+        n=sc.nextInt();
+        int i;
+        int[] array=new int[n];
+        System.out.println("enter the elements ");
+         for(i = 0; i < n; i++)  
+       {  
+            array[i] = sc.nextInt();  
+            
+        } 
+       System.out.println("the given input array is:");
+       System.out.println(Arrays.toString(array));
+       Arrays.sort(array);
+       System.out.println("enter the K value:");
+       int k=sc.nextInt();
+       System.out.println("The k largest elements of the array are:");
+       for(int j=array.length-1;j>=array.length-k;j--)
+       {
+        System.out.print(array[j]+" "); 
+       }
+   }
+}
+
+
+
+QUESTION- 6
+import java.util.Scanner;
+public class pgm6 {	
+	public static int countBitsTozeroBasedOnString(int n) {
+    int ctr = 0;
+    String binaryNumber = Integer.toBinaryString(n);
+	System.out.print("Binary representation of "+n+" is: "+binaryNumber);
+    for (char ch : binaryNumber.toCharArray()) {
+      ctr += ch == '0' ? 1 : 0;
+    }
+    return ctr;
+  }	
+	
+    public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        System.out.print("Input first number: ");
+        int n = in.nextInt();
+		System.out.println("\nNumber of zero bits: " + countBitsTozeroBasedOnString(n));
+		}
+}
+
+
